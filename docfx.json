@@ -4,13 +4,21 @@
       "src": [
         {
           "files": [
-            "src/**.csproj"
-          ]
+            "**.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**"
+          ],
+          "src": "../src"
         }
       ],
       "dest": "api",
       "disableGitFeatures": false,
-      "disableDefaultFilter": false
+      "disableDefaultFilter": false,
+      "properties": {
+        "TargetFramework": "netcoreapp3.1"
+      }      
     }
   ],
   "build": {
@@ -52,13 +60,14 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default"
+      "statictoc"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+    "disableGitFeatures": false,
+    "noLangKeyword": false
   }
 }
