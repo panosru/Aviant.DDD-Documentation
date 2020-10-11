@@ -1,16 +1,19 @@
 {
+  "$schema": "https://dotnet.github.io/docfx/schemas/v1.0/schema.json#",
   "metadata": [
     {
       "src": [
         {
+          "src": "../src",
           "files": [
-            "**.csproj"
+            "Core/Core.csproj",
+            "Application/Application.csproj",
+            "Infrastructure/Infrastructure.csproj"
           ],
           "exclude": [
             "**/bin/**",
             "**/obj/**"
-          ],
-          "src": "../src"
+          ]
         }
       ],
       "dest": "api",
@@ -18,10 +21,21 @@
       "disableDefaultFilter": false,
       "properties": {
         "TargetFramework": "netcoreapp3.1"
-      }      
+      }
     }
   ],
   "build": {
+    "globalMetadata": {
+      "_enableSearch": true,
+      "_disableNavbar": false,
+      "_disableBreadcrumb": false,
+      "_disableToc": false,
+      "_appTitle": "Aviant DDD Library Documentation",
+      "_appFooter": "&copy; 2020 Aviant DDD Library",
+      "_gitContribute": {
+        "branch": "master"
+      }
+    },
     "content": [
       {
         "files": [
@@ -41,7 +55,7 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "assets/images/**"
         ]
       }
     ],
@@ -60,14 +74,14 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "statictoc"
+      "default",
+      "templates/aviant"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": false,
-    "noLangKeyword": false
+    "disableGitFeatures": false
   }
 }
